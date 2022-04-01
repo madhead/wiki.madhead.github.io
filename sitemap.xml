@@ -2,10 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/k8s/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/emigration/poland/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/books/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/emigration/poland/finance/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/emigration/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/ideas/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/linux/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/people/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/style/</loc>
+  </url><url>
     <loc>https://wiki.madhead.me/categories/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/tags/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/emigration/poland/finance/ppk/</loc>
   </url>
 </urlset>
