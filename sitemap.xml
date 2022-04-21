@@ -2,8 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wiki.madhead.me/wiki/software-engineering/k8s/</loc>
-  </url><url>
     <loc>https://wiki.madhead.me/wiki/emigration/poland/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/philosophy/lot-2046/lot2046/</loc>
@@ -16,7 +14,11 @@
   </url><url>
     <loc>https://wiki.madhead.me/wiki/emigration/poland/finance/</loc>
   </url><url>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/clean-code/</loc>
+  </url><url>
     <loc>https://wiki.madhead.me/wiki/design/3d-modelling/blender/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/k8s/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/emigration/poland/healthcare/</loc>
   </url><url>
