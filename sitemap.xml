@@ -8,7 +8,7 @@
   </url><url>
     <loc>https://wiki.madhead.me/wiki/software-engineering/java/</loc>
   </url><url>
-    <loc>https://wiki.madhead.me/wiki/software-engineering/k8s/</loc>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/containers-docker-k8s/k8s/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/emigration/poland/healthcare/</loc>
   </url><url>
@@ -31,6 +31,8 @@
     <loc>https://wiki.madhead.me/wiki/travel/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/art/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/containers-docker-k8s/docker/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/computers/linux/</loc>
   </url><url>
@@ -56,6 +58,8 @@
   </url><url>
     <loc>https://wiki.madhead.me/wiki/books/</loc>
   </url><url>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/containers-docker-k8s/containers/</loc>
+  </url><url>
     <loc>https://wiki.madhead.me/wiki/photo-video/photo/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/photo-video/</loc>
@@ -71,6 +75,8 @@
     <loc>https://wiki.madhead.me/wiki/software-engineering/system-design/cap/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/keyboards/touch-typing/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/containers-docker-k8s/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/travel/cycling/</loc>
   </url><url>
