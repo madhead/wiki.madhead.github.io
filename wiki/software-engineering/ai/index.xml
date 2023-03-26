@@ -12,7 +12,9 @@
       
       <guid>https://wiki.madhead.me/wiki/software-engineering/ai/sd/</guid>
       <description>Misc Stable Diffusion with 🧨 Diffusers
-An introduction to the 🤗 Hugging Face’s diffusers library.</description>
+An introduction to the 🤗 Hugging Face’s diffusers library.
+Your own Stable Diffusion endpoint with AWS SageMaker
+Brilliant article about SD, AWS Lambda and AWS SageMaker.</description>
     </item>
     
   </channel>
