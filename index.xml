@@ -92,14 +92,18 @@ General Information PPK is a universal savings system for employees. The main ob
     
     <item>
       <title>💭 Stable Diffusion</title>
-      <link>https://wiki.madhead.me/wiki/software-engineering/ai/sd/</link>
+      <link>https://wiki.madhead.me/wiki/ai/sd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://wiki.madhead.me/wiki/software-engineering/ai/sd/</guid>
+      <guid>https://wiki.madhead.me/wiki/ai/sd/</guid>
       <description>Misc Stable Diffusion with 🧨 Diffusers
 An introduction to the 🤗 Hugging Face’s diffusers library.
+Diffusers
+A Colab notebook to play with the 🤗 Hugging Face’s diffusers library.
 Your own Stable Diffusion endpoint with AWS SageMaker
-Brilliant article about SD, AWS Lambda and AWS SageMaker.</description>
+Brilliant article about SD, AWS Lambda and AWS SageMaker.
+PyTTI
+PyTTI is a toolkit that facilitates image generation, animation, and manipulation using processes that could be thought of as a human artist collaborating with AI assistants.</description>
     </item>
     
     <item>
