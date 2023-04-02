@@ -4,9 +4,11 @@
   <url>
     <loc>https://wiki.madhead.me/wiki/keyboards/</loc>
   </url><url>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/programming-languages/</loc>
+  </url><url>
     <loc>https://wiki.madhead.me/wiki/cooking/coffee/</loc>
   </url><url>
-    <loc>https://wiki.madhead.me/wiki/software-engineering/java/</loc>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/programming-languages/java/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/software-engineering/containers-docker-k8s/k8s/</loc>
   </url><url>
@@ -116,6 +118,10 @@
   </url><url>
     <loc>https://wiki.madhead.me/wiki/emigration/poland/business/</loc>
   </url><url>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/db/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/db/redis/</loc>
+  </url><url>
     <loc>https://wiki.madhead.me/wiki/3d-printing/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/people/</loc>
@@ -131,6 +137,8 @@
     <loc>https://wiki.madhead.me/wiki/philosophy/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/travel/hiking/</loc>
+  </url><url>
+    <loc>https://wiki.madhead.me/wiki/software-engineering/programming-languages/rust/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/cooking/</loc>
   </url><url>

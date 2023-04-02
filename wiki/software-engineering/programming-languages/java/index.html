@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Misc You Can’t Sacrifice Partition Tolerance [EN 🇺🇸] [Oct 2010]
-Of the CAP theorem’s Consistency, Availability, and Partition Tolerance, Partition Tolerance is mandatory in distributed systems. You cannot not choose it. Instead of CAP, you should think about your availability in terms of yield (~availability, percent of requests answered successfully) and harvest (~consistency, percent of required data actually included in the responses) and which of these two your system will sacrifice when failures happen.">
+<meta name="description" content="Misc SDKMAN!
+A tool for managing parallel versions of multiple Software Development Kits.
+JBang
+Quickly run .java, .kt, or *.groovy files as scripts.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="🔺 CAP" />
-<meta property="og:description" content="Misc You Can’t Sacrifice Partition Tolerance [EN 🇺🇸] [Oct 2010]
-Of the CAP theorem’s Consistency, Availability, and Partition Tolerance, Partition Tolerance is mandatory in distributed systems. You cannot not choose it. Instead of CAP, you should think about your availability in terms of yield (~availability, percent of requests answered successfully) and harvest (~consistency, percent of required data actually included in the responses) and which of these two your system will sacrifice when failures happen." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://wiki.madhead.me/wiki/software-engineering/system-design/cap/" /><meta property="article:section" content="wiki" />
-
-
-<title>🔺 CAP | Everything I know</title>
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="☕ JVM" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://wiki.madhead.me/wiki/software-engineering/programming-languages/java/" />
+<title>☕ JVM | Everything I know</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.3751f79112047a25dd0fabe2511cec2318bbdfd0a26160c6ad417b88bc46b8a2.css" integrity="sha256-N1H3kRIEeiXdD6viURzsIxi739CiYWDGrUF7iLxGuKI=" crossorigin="anonymous">
@@ -32,6 +31,7 @@ if (!doNotTrack) {
 	gtag('config', 'G-S2TKKX248W', { 'anonymize_ip': false });
 }
 </script>
+<link rel="alternate" type="application/rss+xml" href="https://wiki.madhead.me/wiki/software-engineering/programming-languages/java/index.xml" title="Everything I know" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1230,7 +1230,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-b5054bdf291ed38f1ea022666c9efca4" class="toggle"  />
+    <input type="checkbox" id="section-b5054bdf291ed38f1ea022666c9efca4" class="toggle" checked />
     <label for="section-b5054bdf291ed38f1ea022666c9efca4" class="flex justify-between">
       <a role="button" class="">⌨️ Programming languages</a>
     </label>
@@ -1246,9 +1246,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-43a4c29c31e1a6448f6185af46ef1601" class="toggle"  />
+    <input type="checkbox" id="section-43a4c29c31e1a6448f6185af46ef1601" class="toggle" checked />
     <label for="section-43a4c29c31e1a6448f6185af46ef1601" class="flex justify-between">
-      <a href="/wiki/software-engineering/programming-languages/java/" class="">☕ JVM</a>
+      <a href="/wiki/software-engineering/programming-languages/java/" class="active">☕ JVM</a>
     </label>
   
 
@@ -1293,7 +1293,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-0402a920f5e8ef3e31d9de3365123765" class="toggle" checked />
+    <input type="checkbox" id="section-0402a920f5e8ef3e31d9de3365123765" class="toggle"  />
     <label for="section-0402a920f5e8ef3e31d9de3365123765" class="flex justify-between">
       <a href="/wiki/software-engineering/system-design/" class="">🧱 System design</a>
     </label>
@@ -1309,7 +1309,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/wiki/software-engineering/system-design/cap/" class="active">🔺 CAP</a>
+    <a href="/wiki/software-engineering/system-design/cap/" class="">🔺 CAP</a>
   
 
         </li>
@@ -1500,7 +1500,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>🔺 CAP</strong>
+  <strong>☕ JVM</strong>
 
   <label for="toc-control">
     
@@ -1514,7 +1514,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#_misc">Misc</a></li>
+  </ul>
+</nav>
 
 
 
@@ -1525,25 +1529,23 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><div class="sect1">
+  <article class="markdown">
+<div class="sect1">
 <h2 id="_misc">Misc</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://codahale.com/you-cant-sacrifice-partition-tolerance">You Can’t Sacrifice Partition Tolerance</a>
-[EN 🇺🇸]
-[Oct 2010]</p>
+<p><a href="https://sdkman.io">SDKMAN!</a></p>
 <div class="paragraph">
-<p>Of the CAP theorem’s Consistency, Availability, and Partition Tolerance, Partition Tolerance is mandatory in distributed systems.
-You cannot <strong>not choose</strong> it.
-Instead of CAP, you should think about your availability in terms of <em>yield</em> (~availability, percent of requests answered successfully) and <em>harvest</em> (~consistency, percent of required data actually included in the responses) and which of these two your system will sacrifice when failures happen.</p>
+<p>A tool for managing parallel versions of multiple Software Development Kits.</p>
 </div>
 </li>
 <li>
-<p><a href="https://arxiv.org/abs/1509.05393">A Critique of the CAP Theorem</a>
-[EN 🇺🇸]
-[Sep 2015]</p>
+<p><a href="https://www.jbang.dev">JBang</a></p>
+<div class="paragraph">
+<p>Quickly run <code><strong>.java</strong></code><strong>, <code></code></strong><code>.kt</code>, or <code>*.groovy</code> files as scripts.</p>
+</div>
 </li>
 </ul>
 </div>
@@ -1561,7 +1563,7 @@ Instead of CAP, you should think about your availability in terms of <em>yield</
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/madhead/wiki/edit/master/content/wiki/software%20engineering/system%20design/CAP.adoc" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/madhead/wiki/edit/master/content/wiki/software%20engineering/programming%20languages/java/_index.adoc" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>Edit this page</span>
     </a>
@@ -1591,7 +1593,11 @@ Instead of CAP, you should think about your availability in terms of <em>yield</
       <div class="book-toc-content">
         
   
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#_misc">Misc</a></li>
+  </ul>
+</nav>
 
 
  
