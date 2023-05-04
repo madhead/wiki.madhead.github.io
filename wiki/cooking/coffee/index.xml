@@ -6,6 +6,22 @@
     <description>Recent content in ☕ Coffee on Everything I know</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://wiki.madhead.me/wiki/cooking/coffee/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>📱 Apps</title>
+      <link>https://wiki.madhead.me/wiki/cooking/coffee/apps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wiki.madhead.me/wiki/cooking/coffee/apps/</guid>
+      <description>Apps iBrewCoffee
+Personal coffee tasting journal. Probably, the most comprehensive one. It has everything: beans, roasters, grinders, methods, ratings, etc. Event kettles!
+Aeromatic
+The AeroPress timer app with 50+ recipes.
+2 Brew
+PWA coffee timer with predefined recipes for AeroPress, V60 and Moka pot.
+coffee.cup.guru
+Android app with filtered coffee recipes and coffee log.</description>
+    </item>
+    
+    <item>
       <title>🔥 Roasters</title>
       <link>https://wiki.madhead.me/wiki/cooking/coffee/roasters/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -18,7 +34,8 @@ JAVA [🇵🇱]
 COFFEE PLANT [🇵🇱]
 Kiwi Garden [🇵🇱]
 MadHeads [🇺🇦]
-To try CoffeePro [🇵🇱][KRK!]
+To try Dobra Palarnia Kawy [🇵🇱][KRK!]
+CoffeePro [🇵🇱][KRK!]
 Pożegnanie z Afryką [🇵🇱][KRK!]
 Klejnot Afryki [🇵🇱][KRK!]
 Proper [🇵🇱]
@@ -29,6 +46,25 @@ COFFEELAB [🇵🇱]
 KawePale [🇵🇱]
 CAFFEGRANO [🇵🇱]
 KYOTO [🇵🇱]</description>
+    </item>
+    
+    <item>
+      <title>🗜️ AeroPress</title>
+      <link>https://wiki.madhead.me/wiki/cooking/coffee/aeropress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wiki.madhead.me/wiki/cooking/coffee/aeropress/</guid>
+      <description>Recipes AeroPrecipe
+AeroPress recipes.
+Theory The AeroPress Series by James Hoffmann. [🇬🇧]
+AeroPress was invented in 2005 by Alan Adler, inventor and retired Stanford University engineering instructor.
+Brew for about 2 minutes (depends on the grinding).
+Stir (or swirl).
+Doubling the amount of coffee for dilution and making two cups doesn’t work.
+Inverted method has no benefits.
+Don’t press to hard.
+Preheating doesn’t make any sense.
+Brew at 80 °C or 100 °C.</description>
     </item>
     
   </channel>
