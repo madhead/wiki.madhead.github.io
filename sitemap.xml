@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wiki.madhead.me/</loc>
+  </url><url>
     <loc>https://wiki.madhead.me/wiki/keyboards/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/wiki/software-engineering/programming-languages/</loc>
@@ -117,8 +119,6 @@
     <loc>https://wiki.madhead.me/wiki/ai/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/categories/</loc>
-  </url><url>
-    <loc>https://wiki.madhead.me/</loc>
   </url><url>
     <loc>https://wiki.madhead.me/tags/</loc>
   </url><url>

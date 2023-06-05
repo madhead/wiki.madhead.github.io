@@ -4,15 +4,15 @@
 	<meta name="generator" content="Hugo 0.112.7">
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ну как это не работают?
-Вот ссылка на репу
-Cсылки выше не работают, потому что я просто переименовал файл!">
+<meta name="description" content="Keyboards Guide # This guide will help you choose the right keyboard for your needs and show you various API facilities available in the library to support your choice.
+Introduction # Keyboard Types # The first thing you need to know is that there are two types of keyboards available in the Telegram Bot API: reply and inline keyboards.
+Note the differences in the way these keyboards are shown to a user.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="madhead&#39;s wiki" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://wiki.madhead.me/" />
-<title>madhead&#39;s wiki | Everything I know</title>
+<title> | Everything I know</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.3751f79112047a25dd0fabe2511cec2318bbdfd0a26160c6ad417b88bc46b8a2.css" integrity="sha256-N1H3kRIEeiXdD6viURzsIxi739CiYWDGrUF7iLxGuKI=" crossorigin="anonymous">
@@ -1767,7 +1767,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>madhead&#39;s wiki</strong>
+  <strong></strong>
 
   <label for="toc-control">
     
@@ -1781,7 +1781,31 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a>
+      <ul>
+        <li><a href="#keyboard-types">Keyboard Types</a></li>
+        <li><a href="#simple-keyboard-interactions">Simple Keyboard Interactions</a></li>
+        <li><a href="#extended-keyboard-interactions">Extended Keyboard Interactions</a></li>
+      </ul>
+    </li>
+    <li><a href="#basic-api--classes">Basic API &amp; Classes</a>
+      <ul>
+        <li><a href="#keyboards">Keyboards</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#matrices">Matrices</a></li>
+      </ul>
+    </li>
+    <li><a href="#working-with-keyboards">Working with keyboards</a>
+      <ul>
+        <li><a href="#reply-keyboards">Reply keyboards</a></li>
+        <li><a href="#inline-keyboards">Inline keyboards</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
 
 
 
@@ -1792,10 +1816,447 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><p>Ну как это не работают?</p>
-<p>Вот 
-  <a href="https://github.com/InsanusMokrassar/ktgbotapi">ссылка</a> на репу</p>
-<p>Cсылки выше не работают, потому что я просто переименовал файл!</p>
+  <article class="markdown"><h1 id="keyboards-guide">
+  Keyboards Guide
+  <a class="anchor" href="#keyboards-guide">#</a>
+</h1>
+<p>This guide will help you choose the right keyboard for your needs and show you various API facilities available in the library to support your choice.</p>
+<h2 id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h2>
+<h3 id="keyboard-types">
+  Keyboard Types
+  <a class="anchor" href="#keyboard-types">#</a>
+</h3>
+<p>The first thing you need to know is that there are two types of keyboards available in the Telegram Bot API: 
+  <a href="https://core.telegram.org/bots/features#keyboards"><strong>reply</strong></a> and 
+  <a href="https://core.telegram.org/bots/features#inline-keyboards"><strong>inline</strong></a> keyboards.</p>
+<p>
+  <img src="001.png" alt="Keyboards comparison" title="Keyboards comparison"/></p>
+<p>Note the differences in the way these keyboards are shown to a user.</p>
+<p>A reply keyboard is shown under the message input field.
+It replaces the device&rsquo;s native input method on a mobile device.</p>
+<p>An inline keyboard is shown as a part of the message in the chat.</p>
+<h3 id="simple-keyboard-interactions">
+  Simple Keyboard Interactions
+  <a class="anchor" href="#simple-keyboard-interactions">#</a>
+</h3>
+<p>When a user clicks on a simple reply keyboard button, its text is just sent in the chat.</p>
+<p>When a user clicks on a simple inline keyboard button, nothing is sent to the chat.
+Instead, a 
+  <a href="https://core.telegram.org/bots/api#callbackquery">callback query</a> (a fancy way to say &ldquo;a request&rdquo;) is sent directly to the bot and the button is highlighted.
+It will stay highlighted until the bot acks the callback.</p>
+<p>
+  <img src="002.png" alt="Simple keyboard interactions" title="Simple keyboard interactions"/></p>
+<p>NOTE: It&rsquo;s a common mistake to forget to handle callback queries.
+It leads to the buttons being highlighted for long periods of time, which leads to a bad user experience.
+Don&rsquo;t forget to handle these callbacks!</p>
+<p>As new messages arrive, a reply keyboard will stay there, while the inline keyboard will stick to the message and move with it.</p>
+<p>
+  <img src="003.png" alt="Keyboards position with multiple messages" title="Keyboards position with multiple messages"/></p>
+<p>Ups…
+The reply keyboard is now far away from the message it was sent with.</p>
+<p>Actually, they are two different unrelated entities now: the original message and the reply keyboard.
+A reply keyboard persists until you explicitly 
+  <a href="https://core.telegram.org/bots/api#replykeyboardremove">remove</a> it or replace it with a different one.</p>
+<p>NOTE: It&rsquo;s a common mistake to forget to remove or replace reply keyboards.
+It leads to the keyboards being shown forever.
+Don&rsquo;t forget to remove reply keyboards when you don&rsquo;t need them anymore!</p>
+<p>An inline keyboard could also be removed or changed by editing the original message it was attached to.</p>
+<h3 id="extended-keyboard-interactions">
+  Extended Keyboard Interactions
+  <a class="anchor" href="#extended-keyboard-interactions">#</a>
+</h3>
+<p>Keyboards are not limited to text only.
+They could be used to ask users for different things, like payments, locations, phone numbers, etc.
+They could be used to open arbitrary URLs or 
+  <a href="https://core.telegram.org/bots/webapps">web apps</a>.
+Telegram clients process these buttons and interact with the users in the appropriate ways.</p>
+<p>For the full list of options, see the official documentation on 
+  <a href="https://core.telegram.org/bots/api#keyboardbutton">reply</a> and 
+  <a href="https://core.telegram.org/bots/api#inlinekeyboardbutton">inline</a> keyboards.</p>
+<p>
+  <img src="004.png" alt="Extended keyboard interactions" title="Extended keyboard interactions"/></p>
+<h2 id="basic-api--classes">
+  Basic API &amp; Classes
+  <a class="anchor" href="#basic-api--classes">#</a>
+</h2>
+<p>Now, that you know the basics, let&rsquo;s see how to use the library.</p>
+<h3 id="keyboards">
+  Keyboards
+  <a class="anchor" href="#keyboards">#</a>
+</h3>
+<p>In Telegram Bot API keyboards are sent to the user as a part of an interaction via the <code>reply_markup</code> parameter.
+More specifically, this parameter is available:</p>
+<ul>
+<li>in the <code>sendXXX</code> methods, like 
+  <a href="https://core.telegram.org/bots/api#sendmessage"><code>sendMessage</code></a>, 
+  <a href="https://core.telegram.org/bots/api#sendphoto"><code>sendPhoto</code></a>, 
+  <a href="sendSticker"><code>sendSticker</code></a>, etc.</li>
+<li>in the 
+  <a href="https://core.telegram.org/bots/api#copymessage"><code>copyMessage</code></a> method</li>
+<li>in the <code>editMessageXXX</code> methods, like 
+  <a href="https://core.telegram.org/bots/api#editmessagetext"><code>editMessageText</code></a>, 
+  <a href="https://core.telegram.org/bots/api#editmessagecaption"><code>editMessageCaption</code></a>, 
+  <a href="https://core.telegram.org/bots/api#editmessagereplymarkup"><code>editMessageReplyMarkup</code></a>, etc.
+This also includes <code>stopXXX</code> methods like the 
+  <a href="https://core.telegram.org/bots/api#stopmessagelivelocation"><code>stopMessageLiveLocation</code></a> method.</li>
+</ul>
+<p>TIP: <code>editMessageReplyMarkup</code> is specifically designed to edit a message&rsquo;s inline keyboard.</p>
+<p>Sending inline keyboards is also supported in inline mode through the <code>reply_markup</code> parameter of the 
+  <a href="https://core.telegram.org/bots/api#inlinequeryresult"><code>InlineQueryResult</code></a> type and its inheritors.
+However, this 
+  <a href="https://core.telegram.org/bots/inline">inline mode</a> is unrelated to the inline keyboards.</p>
+<p>The <code>reply_markup</code> parameter accepts four different types.
+Two of them — 
+  <a href="https://core.telegram.org/bots/api#replykeyboardmarkup"><code>ReplyKeyboardMarkup</code></a> and 
+  <a href="https://core.telegram.org/bots/api#inlinekeyboardmarkup"><code>InlineKeyboardMarkup</code></a> — correspond to the reply and inline keyboards respectively.
+The 
+  <a href="https://core.telegram.org/bots/api#replykeyboardremove"><code>ReplyKeyboardRemove</code></a> type is used to remove reply keyboards, but it&rsquo;s not a keyboard itself.
+The last one, 
+  <a href="https://core.telegram.org/bots/api#forcereply"><code>ForceReply</code></a>, is used to force users to reply to the bot.
+It is not a keyboard either, but yet another dirty hack employed by the Telegram Bot API.</p>
+<p>
+  <img src="005.png" alt="A force reply" title="A force reply"/></p>
+<p>Now, in the library, the 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.abstracts.types/-with-reply-markup/index.html"><code>WithReplyMarkup</code></a> is a 
+  <a href="https://en.wikipedia.org/wiki/Marker_interface_pattern">marker interface</a> for all the interactions which could have a <code>reply_markup</code> parameter.
+It is extended by the 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.requests.send.abstracts/-replying-markup-send-message-request/index.html"><code>ReplyingMarkupSendMessageRequest</code></a>, and then, finally, by classes like 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.requests.send/-send-text-message/index.html"><code>SendTextMessage</code></a>.
+This, basically, corresponds to the Telegram Bot API.</p>
+<p>The other way to send a keyboard is through the <code>replyMarkup</code> parameter of the numerous extension methods, like 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.api/dev.inmo.tgbotapi.extensions.api.send/send-message.html"><code>sendMessage</code></a>.
+Those are just convenient wrappers around general interaction classes, like the aforementioned <code>SendTextMessage</code>.</p>
+<h3 id="buttons">
+  Buttons
+  <a class="anchor" href="#buttons">#</a>
+</h3>
+<p>As we already know, keyboards consist of buttons.
+Button classes reside in the <code>dev.inmo.tgbotapi.types.buttons</code> package.</p>
+<p>The base class for the reply keyboard buttons is the 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.types.buttons/-keyboard-button/index.html"><code>KeyboardButton</code></a>.
+The base class for the inline keyboard buttons is the 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.types.buttons.InlineKeyboardButtons/-inline-keyboard-button/index.html"><code>InlineKeyboardButton</code></a>.</p>
+<p>See their inheritors for the full list of the available buttons.
+The names are pretty self-explanatory and correspond to the Telegram Bot API.</p>
+<p>For example, to send a simple reply keyboard button, use the 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.types.buttons/-simple-keyboard-button/index.html"><code>SimpleKeyboardButton</code></a> class.
+To request a contact from the user through the reply, use the 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.types.buttons/-request-contact-keyboard-button/index.html"><code>RequestContactKeyboardButton</code></a> class.
+To attach a URL button to the message, use the 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.types.buttons.InlineKeyboardButtons/-u-r-l-inline-keyboard-button/index.html"><code>URLInlineKeyboardButton</code></a>.
+And to attach a callback button, use the 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.types.buttons.InlineKeyboardButtons/-callback-data-inline-keyboard-button/index.html"><code>CallbackDataInlineKeyboardButton</code></a>.</p>
+<p>You get the idea.</p>
+<p>So, to send a reply keyboard use the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>bot.sendMessage(
+</span></span><span style="display:flex;"><span>    chatId = chat,
+</span></span><span style="display:flex;"><span>    text = <span style="color:#e6db74">&#34;What is the best Kotlin Telegram Bot API library?&#34;</span>,
+</span></span><span style="display:flex;"><span>    replyMarkup = ReplyKeyboardMarkup(
+</span></span><span style="display:flex;"><span>        keyboard = listOf(
+</span></span><span style="display:flex;"><span>            listOf(
+</span></span><span style="display:flex;"><span>                SimpleKeyboardButton(<span style="color:#e6db74">&#34;ktgbotapi&#34;</span>),
+</span></span><span style="display:flex;"><span>            ),
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>And here is how you send a basic inline keyboard:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>bot.sendMessage(
+</span></span><span style="display:flex;"><span>    chatId = chat,
+</span></span><span style="display:flex;"><span>    text = <span style="color:#e6db74">&#34;ktgbotapi is the best Kotlin Telegram Bot API library&#34;</span>,
+</span></span><span style="display:flex;"><span>    replyMarkup = InlineKeyboardMarkup(
+</span></span><span style="display:flex;"><span>        keyboard = listOf(
+</span></span><span style="display:flex;"><span>            listOf(
+</span></span><span style="display:flex;"><span>                CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;I know&#34;</span>, <span style="color:#e6db74">&#34;know&#34;</span>),
+</span></span><span style="display:flex;"><span>                URLInlineKeyboardButton(<span style="color:#e6db74">&#34;Learn more&#34;</span>, <span style="color:#e6db74">&#34;https://github.com/InsanusMokrassar/ktgbotapi&#34;</span>)
+</span></span><span style="display:flex;"><span>            ),
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    ),
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>
+  <img src="006.png" alt="Keyboards with ktgbotapi" title="Keyboards with ktgbotapi"/></p>
+<p>When we&rsquo;re done with this simple quiz, we can remove the keyboard with the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>bot.sendMessage(
+</span></span><span style="display:flex;"><span>    chatId = chat,
+</span></span><span style="display:flex;"><span>    text = <span style="color:#e6db74">&#34;You&#39;re goddamn right!&#34;</span>,
+</span></span><span style="display:flex;"><span>    replyMarkup = ReplyKeyboardRemove()
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>NOTE: Don&rsquo;t forget to remove the reply keyboards!</p>
+<h3 id="matrices">
+  Matrices
+  <a class="anchor" href="#matrices">#</a>
+</h3>
+<p>Buttons in keyboards are arranged in matrices, i.e. two-dimensional arrays, or, to say in layperson&rsquo;s terms, rows and columns.
+In contrast to the matrices you&rsquo;ve learned in school, keyboards are not always necessarily square.
+Try it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>bot.sendMessage(
+</span></span><span style="display:flex;"><span>    chatId = chat,
+</span></span><span style="display:flex;"><span>    text = <span style="color:#e6db74">&#34;In contrast to the matrices you&#39;ve learned in school, keyboards are not always necessary square.&#34;</span>,
+</span></span><span style="display:flex;"><span>    replyMarkup = InlineKeyboardMarkup(
+</span></span><span style="display:flex;"><span>        keyboard = listOf(
+</span></span><span style="display:flex;"><span>            listOf(
+</span></span><span style="display:flex;"><span>                CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;1&#34;</span>, <span style="color:#e6db74">&#34;1&#34;</span>),
+</span></span><span style="display:flex;"><span>                CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;2&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span>),
+</span></span><span style="display:flex;"><span>                CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;3&#34;</span>, <span style="color:#e6db74">&#34;3&#34;</span>),
+</span></span><span style="display:flex;"><span>            ),
+</span></span><span style="display:flex;"><span>            listOf(
+</span></span><span style="display:flex;"><span>                CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;4&#34;</span>, <span style="color:#e6db74">&#34;4&#34;</span>),
+</span></span><span style="display:flex;"><span>                CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;5&#34;</span>, <span style="color:#e6db74">&#34;5&#34;</span>),
+</span></span><span style="display:flex;"><span>            ),
+</span></span><span style="display:flex;"><span>            listOf(
+</span></span><span style="display:flex;"><span>                CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;6&#34;</span>, <span style="color:#e6db74">&#34;6&#34;</span>),
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>
+  <img src="007.png" alt="A triangular keyboard" title="A triangular keyboard"/></p>
+<p>This way of building matrices is not very convenient, so the library provides a few eloquent DSLs to simplify that.</p>
+<p>First, there are 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.utils/matrix.html"><code>matrix</code></a> and 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.utils/row.html"><code>row</code></a>, so the keyboard above can be built like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>bot.sendMessage(
+</span></span><span style="display:flex;"><span>    chatId = chat,
+</span></span><span style="display:flex;"><span>    text = <span style="color:#e6db74">&#34;DSLs are sweet!&#34;</span>,
+</span></span><span style="display:flex;"><span>    replyMarkup = InlineKeyboardMarkup(
+</span></span><span style="display:flex;"><span>        keyboard = matrix {
+</span></span><span style="display:flex;"><span>            row {
+</span></span><span style="display:flex;"><span>                +CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;1&#34;</span>, <span style="color:#e6db74">&#34;1&#34;</span>)
+</span></span><span style="display:flex;"><span>                +CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;2&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span>)
+</span></span><span style="display:flex;"><span>                +CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;3&#34;</span>, <span style="color:#e6db74">&#34;3&#34;</span>)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            row(
+</span></span><span style="display:flex;"><span>                CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;4&#34;</span>, <span style="color:#e6db74">&#34;4&#34;</span>),
+</span></span><span style="display:flex;"><span>                CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;5&#34;</span>, <span style="color:#e6db74">&#34;5&#34;</span>),
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>            row {
+</span></span><span style="display:flex;"><span>                +CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;6&#34;</span>, <span style="color:#e6db74">&#34;6&#34;</span>)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>NOTE: Those plus signs are mandatory.</p>
+<p>NOTE: There are two different <code>row</code> functions here.
+Can you spot the difference?</p>
+<p>A single-row matrix can be built with a 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.utils/flat-matrix.html"><code>flatMatrix</code></a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>flatMatrix {
+</span></span><span style="display:flex;"><span>    +CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;1&#34;</span>, <span style="color:#e6db74">&#34;1&#34;</span>)
+</span></span><span style="display:flex;"><span>    +CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;2&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span>)
+</span></span><span style="display:flex;"><span>    +CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;3&#34;</span>, <span style="color:#e6db74">&#34;3&#34;</span>)
+</span></span><span style="display:flex;"><span>    +CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;4&#34;</span>, <span style="color:#e6db74">&#34;4&#34;</span>)
+</span></span><span style="display:flex;"><span>    +CallbackDataInlineKeyboardButton(<span style="color:#e6db74">&#34;5&#34;</span>, <span style="color:#e6db74">&#34;5&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>But the most convenient way to build a simple keyboard is to use the constructor-like methods: 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.utils/dev.inmo.tgbotapi.extensions.utils.types.buttons/-inline-keyboard-markup.html"><code>InlineKeyboardMarkup</code></a> and 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.utils/dev.inmo.tgbotapi.extensions.utils.types.buttons/-reply-keyboard-markup.html"><code>ReplyKeyboardMarkup</code></a>.
+Note, that they are named just like the corresponding constructor, but take a vararg of buttons.
+They create flat matrices, i.e. single rows.</p>
+<p>Finally, there are 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.utils/dev.inmo.tgbotapi.extensions.utils.types.buttons/inline-keyboard.html"><code>inlineKeyboard</code></a> and 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.utils/dev.inmo.tgbotapi.extensions.utils.types.buttons/reply-keyboard.html"><code>replyKeyboard</code></a></p>
+<p>DSL methods above rely on Kotlin&rsquo;s feature of receivers and extensions.
+So, the magic is done by 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.utils/-matrix-builder/index.html"><code>MatrixBuilder</code></a> and 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.utils/-row-builder/index.html"><code>RowBuilder</code></a>.
+That&rsquo;s why you must use the plus sign to add buttons to the matrix: it&rsquo;s just an overloaded operator call, another cool Kotlin feature widely used to create sweet DSLs.</p>
+<p>Another bonus of using these DSLs is button builders, like 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.utils/dev.inmo.tgbotapi.extensions.utils.types.buttons/pay-button.html"><code>payButton</code></a>, 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.utils/dev.inmo.tgbotapi.extensions.utils.types.buttons/data-button.html"><code>dataButton</code></a>, and 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.utils/dev.inmo.tgbotapi.extensions.utils.types.buttons/url-button.html"><code>urlButton</code></a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>bot.sendMessage(
+</span></span><span style="display:flex;"><span>    chatId = chat,
+</span></span><span style="display:flex;"><span>    text = <span style="color:#e6db74">&#34;All in one!&#34;</span>,
+</span></span><span style="display:flex;"><span>    replyMarkup = InlineKeyboardMarkup(
+</span></span><span style="display:flex;"><span>        keyboard = matrix {
+</span></span><span style="display:flex;"><span>            row {
+</span></span><span style="display:flex;"><span>                payButton(<span style="color:#e6db74">&#34;Send money&#34;</span>)
+</span></span><span style="display:flex;"><span>                dataButton(<span style="color:#e6db74">&#34;Ok&#34;</span>, <span style="color:#e6db74">&#34;ok&#34;</span>)
+</span></span><span style="display:flex;"><span>                urlButton(<span style="color:#e6db74">&#34;Google&#34;</span>, <span style="color:#e6db74">&#34;https://google.com&#34;</span>)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>Reply keyboard builders provide similar extensions, e.g.
+
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.utils/dev.inmo.tgbotapi.extensions.utils.types.buttons/request-location-button.html"><code>requestLocationButton</code></a>.</p>
+<p>So, choose the style you like — from plain Kotlin lists to sweet DSLs — and use it!</p>
+<h2 id="working-with-keyboards">
+  Working with keyboards
+  <a class="anchor" href="#working-with-keyboards">#</a>
+</h2>
+<p>Working with keyboards is not something special in Telegram Bot API.
+As you have already seen, keyboards are just message parameters.
+Similarly, keyboard interactions are represented by regular 
+  <a href="https://core.telegram.org/bots/api#getting-updates">Updates</a>.
+I.e. when a user interacts with a keyboard, the bot receives an update.</p>
+<p>On the other hand, the library is heavily typed, so the actual type of update you would receive varies.</p>
+<h3 id="reply-keyboards">
+  Reply keyboards
+  <a class="anchor" href="#reply-keyboards">#</a>
+</h3>
+<p>As it was said, reply keyboards cause Telegram clients to send regular messages back to the bot.
+Peruse this example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>bot.buildBehaviourWithLongPolling {
+</span></span><span style="display:flex;"><span>    bot.sendMessage(
+</span></span><span style="display:flex;"><span>        chatId = chat,
+</span></span><span style="display:flex;"><span>        text = <span style="color:#e6db74">&#34;👮 Turn in your accomplices or be prepared for a lengthy 🍆 incarceration ⛓ 👊 ‼&#34;</span>,
+</span></span><span style="display:flex;"><span>        replyMarkup = replyKeyboard {
+</span></span><span style="display:flex;"><span>            +SimpleKeyboardButton(
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;I ain&#39;t no rat! 🚫🐀🤐🙅&#34;</span>
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>            +RequestUserKeyboardButton(
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Rat out 🐀 a friend 👤&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">KeyboardButtonRequestUser</span>.Common(<span style="color:#a6e22e">RequestId</span>.random())
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>            +RequestChatKeyboardButton(
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Rat out 🐀 a group of friends 👥&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">KeyboardButtonRequestChat</span>.Group(<span style="color:#a6e22e">RequestId</span>.random())
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    onText { message: CommonMessage&lt;TextContent&gt; <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        assert(message.text <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;I ain&#39;t no rat! 🚫🐀🤐🙅&#34;</span>)
+</span></span><span style="display:flex;"><span>        bot.reply(
+</span></span><span style="display:flex;"><span>            to = message,
+</span></span><span style="display:flex;"><span>            text = <span style="color:#e6db74">&#34;Good, you&#39;re going to jail alone! ⛓🧑⛓&#34;</span>,
+</span></span><span style="display:flex;"><span>            replyMarkup = ReplyKeyboardRemove()
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    onUserShared { message: PrivateEventMessage&lt;UserShared&gt; <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        bot.reply(
+</span></span><span style="display:flex;"><span>            to = message,
+</span></span><span style="display:flex;"><span>            text = <span style="color:#e6db74">&#34;Haha, you and you friend are both going to jail! ⛓👬⛓&#34;</span>,
+</span></span><span style="display:flex;"><span>            replyMarkup = ReplyKeyboardRemove()
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    onChatShared { message: PrivateEventMessage&lt;ChatShared&gt; <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        bot.reply(
+</span></span><span style="display:flex;"><span>            to = message,
+</span></span><span style="display:flex;"><span>            text = <span style="color:#e6db74">&#34;Haha, now you&#39;re all going to jail! ⛓👨‍👦‍👦⛓&#34;</span>,
+</span></span><span style="display:flex;"><span>            replyMarkup = ReplyKeyboardRemove()
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}.join()
+</span></span></code></pre></div><p>It&rsquo;s big, I know, and I won&rsquo;t explain the <code>buildBehaviourWithLongPolling</code> DSL here, but I hope you get the idea: the bot acts like a cop and asks the user to rat out his friends via a reply keyboard (it&rsquo;s an imaginary situation, of course).
+The user may refuse to cooperate, rat out a single friend or the whole imaginary group.
+The bot receives the user&rsquo;s choices as regular updates, the code above has explicit types (generally optional in Kotlin) and an assert to demonstrate this.</p>
+<p>And here is how it works (the user selects the options in the order):</p>
+<!-- raw HTML omitted -->
+<p>
+  <img src="008.gif" alt="Reply keyboards" title="Reply keyboards"/></p>
+<p>Note how you handle reply keyboards: you process regular messages.
+For instance, a simple text button sends a regular text message indistinguishable from a case when a user simply types the same text manually.</p>
+<p>And don&rsquo;t be a rat in real life: remove the keyboards with the <code>ReplyKeyboardRemove</code> after you&rsquo;ve received the input!
+Otherwise, a keyboard will stay there indefinitely.</p>
+<h3 id="inline-keyboards">
+  Inline keyboards
+  <a class="anchor" href="#inline-keyboards">#</a>
+</h3>
+<p>Finally, to master the keyboards, you need to know how to handle the inline ones.</p>
+<p>Again, let&rsquo;s explore the example.
+Imagine you&rsquo;re making a quiz where users are given a question and a set of answers.
+Additionally, users are given a link to the wiki page to help with the question and a Google button.</p>
+<p>The quiz could be implemented this way:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#75715e">// A simple data class to represent a question
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">val</span> question = Question(
+</span></span><span style="display:flex;"><span>    image = <span style="color:#e6db74">&#34;https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg&#34;</span>,
+</span></span><span style="display:flex;"><span>    question = <span style="color:#e6db74">&#34;Who painted this?&#34;</span>,
+</span></span><span style="display:flex;"><span>    answers = listOf(
+</span></span><span style="display:flex;"><span>        Answer(<span style="color:#e6db74">&#34;Hokusai&#34;</span>, correct = <span style="color:#66d9ef">true</span>),
+</span></span><span style="display:flex;"><span>        Answer(<span style="color:#e6db74">&#34;Sukenobu&#34;</span>),
+</span></span><span style="display:flex;"><span>        Answer(<span style="color:#e6db74">&#34;Chōshun&#34;</span>),
+</span></span><span style="display:flex;"><span>        Answer(<span style="color:#e6db74">&#34;Kiyonobu I&#34;</span>),
+</span></span><span style="display:flex;"><span>    ),
+</span></span><span style="display:flex;"><span>    wiki = <span style="color:#e6db74">&#34;https://en.wikipedia.org/wiki/Ukiyo-e&#34;</span>,
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bot.buildBehaviourWithLongPolling {
+</span></span><span style="display:flex;"><span>    bot.sendPhoto(
+</span></span><span style="display:flex;"><span>        chatId = chat,
+</span></span><span style="display:flex;"><span>        fileId = <span style="color:#a6e22e">InputFile</span>.fromUrl(question.image),
+</span></span><span style="display:flex;"><span>        text = question.question,
+</span></span><span style="display:flex;"><span>        replyMarkup = inlineKeyboard {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// First row: answers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            row {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> (answer <span style="color:#66d9ef">in</span> question.answers.shuffled()) {
+</span></span><span style="display:flex;"><span>                    dataButton(
+</span></span><span style="display:flex;"><span>                        text = answer.answer,
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">data</span> = <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${answer.answer}</span><span style="color:#e6db74">:</span><span style="color:#e6db74">${answer.correct}</span><span style="color:#e6db74">&#34;</span>,
+</span></span><span style="display:flex;"><span>                    )
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Second row: help buttons
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            row {
+</span></span><span style="display:flex;"><span>                urlButton(<span style="color:#e6db74">&#34;Wiki 💁&#34;</span>, question.wiki)
+</span></span><span style="display:flex;"><span>                webAppButton(<span style="color:#e6db74">&#34;Google 🔍&#34;</span>, <span style="color:#e6db74">&#34;https://google.com&#34;</span>)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    onDataCallbackQuery { callback: DataCallbackQuery <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> <span style="color:#960050;background-color:#1e0010">(</span>answer, correct) = callback.<span style="color:#66d9ef">data</span>.split(<span style="color:#e6db74">&#34;:&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (correct.toBoolean()) {
+</span></span><span style="display:flex;"><span>            bot.answerCallbackQuery(
+</span></span><span style="display:flex;"><span>                callback,
+</span></span><span style="display:flex;"><span>                text = <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$answer</span><span style="color:#e6db74"> is a ✅ correct answer!&#34;</span>,
+</span></span><span style="display:flex;"><span>                showAlert = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            bot.answerCallbackQuery(
+</span></span><span style="display:flex;"><span>                callback,
+</span></span><span style="display:flex;"><span>                text = <span style="color:#e6db74">&#34;❌ Try again, </span><span style="color:#e6db74">$answer</span><span style="color:#e6db74"> is not a correct answer…&#34;</span>,
+</span></span><span style="display:flex;"><span>                showAlert = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}.join()
+</span></span></code></pre></div><p>A few important things to note here.</p>
+<p>First, the data buttons (they have the 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.types.buttons.InlineKeyboardButtons/-callback-data-inline-keyboard-button/index.html"><code>CallbackDataInlineKeyboardButton</code></a> type, but in the code we used a 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.utils/dev.inmo.tgbotapi.extensions.utils.types.buttons/data-button.html">neat DSL</a>) must have unique <code>data</code>.
+If the <code>data</code> is not unique, Telegram clients will highlight all the buttons with the same data when a user clicks on one of them.
+Guess how I know that?
+Well, it&rsquo;s not in the docs, so trial and error is the only way to learn it (and many other things about the Telegram Bot API).</p>
+<p>Second, the way you handle inline keyboards is different from the way you handle reply keyboards.
+Bot API will send updates with a <code>callback_query</code> field populated.
+This field, of a 
+  <a href="https://core.telegram.org/bots/api#callbackquery"><code>CallbackQuery</code></a> type, represents incoming callbacks from callback buttons in inline keyboards.
+The library turns them into 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.types.queries.callback/index.html">multiple callback types</a>, like the 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.types.queries.callback/-data-callback-query/index.html"><code>DataCallbackQuery</code></a> we used in the example.
+Finally, to handle these callbacks you could use 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.behaviour_builder/dev.inmo.tgbotapi.extensions.behaviour_builder.triggers_handling/on-data-callback-query.html"><code>onDataCallbackQuery</code></a>.
+Alternatively, if you&rsquo;re not using any DSLs, you have to handle the 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.core/dev.inmo.tgbotapi.types.update/-callback-query-update/index.html"><code>CallbackQueryUpdate</code></a> update type.</p>
+<p>Third, the buttons got highlighted when a user clicks on them.
+When you&rsquo;re done with the callback, you need to answer it, by using the 
+  <a href="https://tgbotapi.inmo.dev/tgbotapi.api/dev.inmo.tgbotapi.extensions.api.answers/answer-callback-query.html"><code>answerCallbackQuery</code></a> function.
+Otherwise, the button will remain highlighted.
+Telegram clients will eventually remove the highlight, but it&rsquo;s still frustrating.</p>
+<p>Finally, you could choose between two styles of acknowledgment: a simple toast-like message or a modal alert.
+The <code>showAlert</code> flag controls this behavior.</p>
+<p>And here is the demo of the quiz:</p>
+<!-- raw HTML omitted -->
+<p>
+  <img src="009.gif" alt="Inline keyboards" title="Inline keyboards"/></p>
+<h2 id="conclusion">
+  Conclusion
+  <a class="anchor" href="#conclusion">#</a>
+</h2>
+<p>Today we&rsquo;ve learned how to use keyboards in Telegram bots.
+There are two types of keyboards: reply and inline.
+Reply keyboards replace the device&rsquo;s keyboard and make clients send a message with the predefined content.
+Inline keyboards are buttons attached to messages.
+Clicking on them causes the client to send a callback to the bot.
+In both scenarios the bot receives an update of a corresponding type and has to acknowledge the keayboard interaction for the client to work properly.</p>
 </article>
  
       
@@ -1838,7 +2299,31 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a>
+      <ul>
+        <li><a href="#keyboard-types">Keyboard Types</a></li>
+        <li><a href="#simple-keyboard-interactions">Simple Keyboard Interactions</a></li>
+        <li><a href="#extended-keyboard-interactions">Extended Keyboard Interactions</a></li>
+      </ul>
+    </li>
+    <li><a href="#basic-api--classes">Basic API &amp; Classes</a>
+      <ul>
+        <li><a href="#keyboards">Keyboards</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#matrices">Matrices</a></li>
+      </ul>
+    </li>
+    <li><a href="#working-with-keyboards">Working with keyboards</a>
+      <ul>
+        <li><a href="#reply-keyboards">Reply keyboards</a></li>
+        <li><a href="#inline-keyboards">Inline keyboards</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
 
 
  
