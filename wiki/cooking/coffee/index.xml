@@ -5,12 +5,12 @@
     <link>https://wiki.madhead.me/wiki/cooking/coffee/</link>
     <description>Recent content in ☕ Coffee on Everything I know</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://wiki.madhead.me/wiki/cooking/coffee/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://wiki.madhead.me/wiki/cooking/coffee/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📱 Apps</title>
       <link>https://wiki.madhead.me/wiki/cooking/coffee/apps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://wiki.madhead.me/wiki/cooking/coffee/apps/</guid>
       <description>Apps iBrewCoffee
 Personal coffee tasting journal. Probably, the most comprehensive one. It has everything: beans, roasters, grinders, methods, ratings, etc. Event kettles!
@@ -21,12 +21,10 @@ PWA coffee timer with predefined recipes for AeroPress, V60 and Moka pot.
 coffee.cup.guru
 Android app with filtered coffee recipes and coffee log.</description>
     </item>
-    
     <item>
       <title>🔥 Roasters</title>
       <link>https://wiki.madhead.me/wiki/cooking/coffee/roasters/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://wiki.madhead.me/wiki/cooking/coffee/roasters/</guid>
       <description>Resellers kawa.pl [🇵🇱]
 CoffeeDesk [🇵🇱]
@@ -48,12 +46,10 @@ KawePale [🇵🇱]
 CAFFEGRANO [🇵🇱]
 KYOTO [🇵🇱]</description>
     </item>
-    
     <item>
       <title>🗜️ AeroPress</title>
       <link>https://wiki.madhead.me/wiki/cooking/coffee/aeropress/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://wiki.madhead.me/wiki/cooking/coffee/aeropress/</guid>
       <description>Recipes AeroPrecipe
 AeroPress recipes.
@@ -67,6 +63,5 @@ Don’t press to hard.
 Preheating doesn’t make any sense.
 Brew at 80 °C or 100 °C.</description>
     </item>
-    
   </channel>
 </rss>

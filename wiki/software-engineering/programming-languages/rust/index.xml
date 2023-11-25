@@ -5,6 +5,7 @@
     <link>https://wiki.madhead.me/wiki/software-engineering/programming-languages/rust/</link>
     <description>Recent content in 🦀 Rust on Everything I know</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://wiki.madhead.me/wiki/software-engineering/programming-languages/rust/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://wiki.madhead.me/wiki/software-engineering/programming-languages/rust/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

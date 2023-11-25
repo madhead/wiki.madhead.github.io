@@ -5,6 +5,7 @@
     <link>https://wiki.madhead.me/wiki/ideas/</link>
     <description>Recent content in 💡 Ideas on Everything I know</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://wiki.madhead.me/wiki/ideas/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://wiki.madhead.me/wiki/ideas/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

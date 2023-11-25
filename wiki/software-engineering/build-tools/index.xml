@@ -5,16 +5,15 @@
     <link>https://wiki.madhead.me/wiki/software-engineering/build-tools/</link>
     <description>Recent content in 🏗️ Build tools on Everything I know</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://wiki.madhead.me/wiki/software-engineering/build-tools/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://wiki.madhead.me/wiki/software-engineering/build-tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🐘 Gradle</title>
       <link>https://wiki.madhead.me/wiki/software-engineering/build-tools/gradle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://wiki.madhead.me/wiki/software-engineering/build-tools/gradle/</guid>
       <description>Misc onepiece.Software by Jendrik Johannes [EN 🇺🇸]
 This guy has a good series of videos on modern Gradle.</description>
     </item>
-    
   </channel>
 </rss>

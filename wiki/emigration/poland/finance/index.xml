@@ -5,12 +5,12 @@
     <link>https://wiki.madhead.me/wiki/emigration/poland/finance/</link>
     <description>Recent content in 🤑 Finance on Everything I know</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://wiki.madhead.me/wiki/emigration/poland/finance/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://wiki.madhead.me/wiki/emigration/poland/finance/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>👴🏽 PPK</title>
       <link>https://wiki.madhead.me/wiki/emigration/poland/finance/ppk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://wiki.madhead.me/wiki/emigration/poland/finance/ppk/</guid>
       <description>Glossary PPK Pracownicze Plany Kapitałowe, employee capital plans.
 IKE Indywidualne Konto Emerytalne.
@@ -20,6 +20,5 @@ PrTE Pracownicze Towarzystwo Emerytalne, employee pension company.
 PPE Pracowniczy Program Emerytalny, employee pension plan.
 General Information PPK is a universal savings system for employees. The main objective of PPK is to provide the participant with additional money, which can be used after the age of 60, and in exceptional situations earlier.</description>
     </item>
-    
   </channel>
 </rss>

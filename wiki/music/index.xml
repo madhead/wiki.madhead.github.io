@@ -5,21 +5,19 @@
     <link>https://wiki.madhead.me/wiki/music/</link>
     <description>Recent content in 🎵 Music on Everything I know</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://wiki.madhead.me/wiki/music/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://wiki.madhead.me/wiki/music/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🎲 Random music</title>
       <link>https://wiki.madhead.me/wiki/music/random/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://wiki.madhead.me/wiki/music/random/</guid>
       <description>Random music Gunna Chorna [🇺🇦]</description>
     </item>
-    
     <item>
       <title>👨‍💻 Music for deep work</title>
       <link>https://wiki.madhead.me/wiki/music/deep-work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://wiki.madhead.me/wiki/music/deep-work/</guid>
       <description>Music for deep work Lofi Girl [🌐]
 lofi.cafe
@@ -28,6 +26,5 @@ Music For Programming
 Несуществующая радиостанция
 Радио «Советская Волна»</description>
     </item>
-    
   </channel>
 </rss>
