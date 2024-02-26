@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>🔀 CRDT &amp; OT on Everything I know</title>
-    <link>https://wiki.madhead.me/wiki/software-engineering/crdt-ot/</link>
+    <link>https://wiki.madhead.me/wiki/software-engineering/crdt--ot/</link>
     <description>Recent content in 🔀 CRDT &amp; OT on Everything I know</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="https://wiki.madhead.me/wiki/software-engineering/crdt-ot/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wiki.madhead.me/wiki/software-engineering/crdt--ot/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
