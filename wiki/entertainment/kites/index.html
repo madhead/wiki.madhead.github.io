@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Video stabilization ffmpeg &#43; vid.stab (source).
-# Generate stabilization data and save it to `transforms.trf` ffmpeg -i input.mp4 -vf vidstabdetect -f null - # Stabilize the video ffmpeg -i input.mp4 -vf vidstabtransform stabilized.mp4 # Create stacked comparison video ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex vstack stacked.MP4 # Create side-by-side comparison video ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex hstack side-by-side.MP4 ffmpeg deshake (source).
-ffmpeg -i input.mp4 -vf deshake=rx=64:ry=64:blocksize=32 -strict -2 stabilized.">
+<meta name="description" content="Sites MBK (My Best Kite)">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="📹 Video" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="🪁 Kites" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://wiki.madhead.me/wiki/photo--video/video/" />
+<meta property="og:url" content="https://wiki.madhead.me/wiki/entertainment/kites/" />
 
-<title>📹 Video | Everything I know</title>
+<title>🪁 Kites | Everything I know</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.3751f79112047a25dd0fabe2511cec2318bbdfd0a26160c6ad417b88bc46b8a2.css" integrity="sha256-N1H3kRIEeiXdD6viURzsIxi739CiYWDGrUF7iLxGuKI=" crossorigin="anonymous">
@@ -31,7 +29,7 @@ if (!doNotTrack) {
 	gtag('config', 'G-S2TKKX248W', { 'anonymize_ip': false });
 }
 </script>
-<link rel="alternate" type="application/rss+xml" href="https://wiki.madhead.me/wiki/photo--video/video/index.xml" title="Everything I know" />
+<link rel="alternate" type="application/rss+xml" href="https://wiki.madhead.me/wiki/entertainment/kites/index.xml" title="Everything I know" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -732,7 +730,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-3aac98f679593cbb3fb3d49c466e33a4" class="toggle"  />
+    <input type="checkbox" id="section-3aac98f679593cbb3fb3d49c466e33a4" class="toggle" checked />
     <label for="section-3aac98f679593cbb3fb3d49c466e33a4" class="flex justify-between">
       <a href="/wiki/entertainment/" class="">🎮 Entertainment</a>
     </label>
@@ -748,9 +746,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-3be2919bdec856e344d6d548a151d621" class="toggle"  />
+    <input type="checkbox" id="section-3be2919bdec856e344d6d548a151d621" class="toggle" checked />
     <label for="section-3be2919bdec856e344d6d548a151d621" class="flex justify-between">
-      <a href="/wiki/entertainment/kites/" class="">🪁 Kites</a>
+      <a href="/wiki/entertainment/kites/" class="active">🪁 Kites</a>
     </label>
   
 
@@ -1119,7 +1117,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-e732dc469e7861d506e73ac2eb7577c2" class="toggle" checked />
+    <input type="checkbox" id="section-e732dc469e7861d506e73ac2eb7577c2" class="toggle"  />
     <label for="section-e732dc469e7861d506e73ac2eb7577c2" class="flex justify-between">
       <a role="button" class="">📷 Photo &amp; Video</a>
     </label>
@@ -1156,9 +1154,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-c96187856f2982c26c0a1f31b506afe4" class="toggle" checked />
+    <input type="checkbox" id="section-c96187856f2982c26c0a1f31b506afe4" class="toggle"  />
     <label for="section-c96187856f2982c26c0a1f31b506afe4" class="flex justify-between">
-      <a href="/wiki/photo--video/video/" class="active">📹 Video</a>
+      <a href="/wiki/photo--video/video/" class="">📹 Video</a>
     </label>
   
 
@@ -1830,7 +1828,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>📹 Video</strong>
+  <strong>🪁 Kites</strong>
 
   <label for="toc-control">
     
@@ -1844,7 +1842,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#_sites">Sites</a></li>
+  </ul>
+</nav>
 
 
 
@@ -1855,52 +1857,14 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><div class="sect1">
-<h2 id="_video_stabilization">Video stabilization</h2>
+  <article class="markdown">
+<div class="sect1">
+<h2 id="_sites">Sites</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><code>ffmpeg + vid.stab</code> (<a href="https://askubuntu.com/a/1389900/171572">source</a>).</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash"># Generate stabilization data and save it to `transforms.trf`
-ffmpeg -i input.mp4 -vf vidstabdetect -f null -
-
-# Stabilize the video
-ffmpeg -i input.mp4 -vf vidstabtransform stabilized.mp4
-
-# Create stacked comparison video
-ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex vstack stacked.MP4
-
-# Create side-by-side comparison video
-ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex hstack side-by-side.MP4</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p><code>ffmpeg deshake</code> (<a href="https://askubuntu.com/a/834594/171572">source</a>).</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">ffmpeg -i input.mp4 -vf deshake=rx=64:ry=64:blocksize=32 -strict -2 stabilized.mp4</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Blender</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://youtu.be/oCHjdEODrpM">How to Stabilize footage in Blender! (Blender VFX)</a> (quick, almost no explanations)</p>
-</li>
-<li>
-<p><a href="https://youtu.be/X8s1kZ-HFww">Blender 2.8 2D video stabilization tutorial</a> (explains all the details)</p>
-</li>
-<li>
-<p><a href="https://youtu.be/8juK-ebEVWUp">Blender 2.81 Movie Clip Editor: Stabilize And Edit A Shaky Video Clip And Render/Export With Audio</a> (explains how to get audio in stabilized videos)</p>
-</li>
-</ul>
-</div>
+<p><a href="https://my-best-kite.com">MBK (My Best Kite)</a></p>
 </li>
 </ul>
 </div>
@@ -1918,7 +1882,7 @@ ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex hstack side-by-side.MP4</c
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/madhead/wiki/edit/master/content/wiki/photo%20&amp;%20video/video/_index.adoc" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/madhead/wiki/edit/master/content/wiki/entertainment/Kites/_index.adoc" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>Edit this page</span>
     </a>
@@ -1948,7 +1912,11 @@ ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex hstack side-by-side.MP4</c
       <div class="book-toc-content">
         
   
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#_sites">Sites</a></li>
+  </ul>
+</nav>
 
 
  
