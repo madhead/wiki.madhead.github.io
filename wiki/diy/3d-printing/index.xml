@@ -7,5 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <atom:link href="https://wiki.madhead.me/wiki/diy/3d-printing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🗜️ Best practices</title>
+      <link>https://wiki.madhead.me/wiki/diy/3d-printing/best-practices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wiki.madhead.me/wiki/diy/3d-printing/best-practices/</guid>
+      <description>Best practices Design Considerations during Design of Plastic Parts&#xA;10 Simple Design Guidelines One Should Follow in Effective Design of Boss Features in Plastic Parts</description>
+    </item>
   </channel>
 </rss>
