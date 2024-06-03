@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Video stabilization ffmpeg &#43; vid.stab (source).
-# Generate stabilization data and save it to `transforms.trf` ffmpeg -i input.mp4 -vf vidstabdetect -f null - # Stabilize the video ffmpeg -i input.mp4 -vf vidstabtransform stabilized.mp4 # Create stacked comparison video ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex vstack stacked.MP4 # Create side-by-side comparison video ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex hstack side-by-side.MP4 ffmpeg deshake (source).
-ffmpeg -i input.mp4 -vf deshake=rx=64:ry=64:blocksize=32 -strict -2 stabilized.">
+<meta name="description" content="Выбираем идеальное молоко в кофейню [🇷🇺]
+Для кофеен выбирайте молоко с содержанием лактозы более 4%, от 4 грамм на 100 мл молока. Иначе оно будет несладким и безвкусным.
+Обычно молоко содержит около 3–3,3% белка. Но в большинство коммерческих молочных продуктов добавляют больше белка. Это помогает добиться более прочной и стабильной молочной пены.
+Для кофеен выбирайте молоко с содержанием белка от 3% и выше.
+Для кофеен выбирайте молоко с содержанием жира 3,2–4%.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://wiki.madhead.me/wiki/photo--video/video/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://wiki.madhead.me/wiki/cooking/coffee/milk/">
   <meta property="og:site_name" content="Everything I know">
-  <meta property="og:title" content="📹 Video">
-  <meta property="og:description" content="Video stabilization ffmpeg &#43; vid.stab (source).
-# Generate stabilization data and save it to `transforms.trf` ffmpeg -i input.mp4 -vf vidstabdetect -f null - # Stabilize the video ffmpeg -i input.mp4 -vf vidstabtransform stabilized.mp4 # Create stacked comparison video ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex vstack stacked.MP4 # Create side-by-side comparison video ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex hstack side-by-side.MP4 ffmpeg deshake (source).
-ffmpeg -i input.mp4 -vf deshake=rx=64:ry=64:blocksize=32 -strict -2 stabilized.">
+  <meta property="og:title" content="🥛 Milk">
+  <meta property="og:description" content="Выбираем идеальное молоко в кофейню [🇷🇺]
+Для кофеен выбирайте молоко с содержанием лактозы более 4%, от 4 грамм на 100 мл молока. Иначе оно будет несладким и безвкусным.
+Обычно молоко содержит около 3–3,3% белка. Но в большинство коммерческих молочных продуктов добавляют больше белка. Это помогает добиться более прочной и стабильной молочной пены.
+Для кофеен выбирайте молоко с содержанием белка от 3% и выше.
+Для кофеен выбирайте молоко с содержанием жира 3,2–4%.">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
-<title>📹 Video | Everything I know</title>
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="wiki">
+<title>🥛 Milk | Everything I know</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.ad3fd74d744966d37542ba09d71f6dd260c3ed2a66113a0dfdb48443f31d471b.css" integrity="sha256-rT/XTXRJZtN1QroJ1x9t0mDD7SpmEToN/bSEQ/MdRxs=" crossorigin="anonymous">
@@ -43,7 +48,6 @@ ffmpeg -i input.mp4 -vf deshake=rx=64:ry=64:blocksize=32 -strict -2 stabilized."
     
   
 
-<link rel="alternate" type="application/rss+xml" href="https://wiki.madhead.me/wiki/photo--video/video/index.xml" title="Everything I know" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -321,7 +325,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-0edeabad2355f346a1b3d469b728a5dc" class="toggle"  />
+    <input type="checkbox" id="section-0edeabad2355f346a1b3d469b728a5dc" class="toggle" checked />
     <label for="section-0edeabad2355f346a1b3d469b728a5dc" class="flex justify-between">
       <a href="/wiki/cooking/" class="">🧑‍🍳 Cooking</a>
     </label>
@@ -337,7 +341,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-13d0319e8afb6812e3632ff39fb4c816" class="toggle"  />
+    <input type="checkbox" id="section-13d0319e8afb6812e3632ff39fb4c816" class="toggle" checked />
     <label for="section-13d0319e8afb6812e3632ff39fb4c816" class="flex justify-between">
       <a href="/wiki/cooking/coffee/" class="">☕ Coffee</a>
     </label>
@@ -385,9 +389,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-4e9e2f99ee6461f655f52fa1acec8d1d" class="toggle"  />
+    <input type="checkbox" id="section-4e9e2f99ee6461f655f52fa1acec8d1d" class="toggle" checked />
     <label for="section-4e9e2f99ee6461f655f52fa1acec8d1d" class="flex justify-between">
-      <a href="/wiki/cooking/coffee/milk/" class="">🥛 Milk</a>
+      <a href="/wiki/cooking/coffee/milk/" class="active">🥛 Milk</a>
     </label>
   
 
@@ -1305,7 +1309,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-e732dc469e7861d506e73ac2eb7577c2" class="toggle" checked />
+    <input type="checkbox" id="section-e732dc469e7861d506e73ac2eb7577c2" class="toggle"  />
     <label for="section-e732dc469e7861d506e73ac2eb7577c2" class="flex justify-between">
       <a role="button" class="">📷 Photo &amp; Video</a>
     </label>
@@ -1342,9 +1346,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-c96187856f2982c26c0a1f31b506afe4" class="toggle" checked />
+    <input type="checkbox" id="section-c96187856f2982c26c0a1f31b506afe4" class="toggle"  />
     <label for="section-c96187856f2982c26c0a1f31b506afe4" class="flex justify-between">
-      <a href="/wiki/photo--video/video/" class="active">📹 Video</a>
+      <a href="/wiki/photo--video/video/" class="">📹 Video</a>
     </label>
   
 
@@ -2016,7 +2020,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>📹 Video</strong>
+  <strong>🥛 Milk</strong>
 
   <label for="toc-control">
     
@@ -2041,56 +2045,40 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><div class="sect1">
-<h2 id="_video_stabilization">Video stabilization</h2>
-<div class="sectionbody">
+  <article class="markdown"><div class="ulist">
+<ul>
+<li>
+<p><a href="https://shop.tastycoffee.ru/blog/moloko-dlya-kofe">Выбираем идеальное молоко в кофейню</a>
+[🇷🇺]</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>ffmpeg + vid.stab</code> (<a href="https://askubuntu.com/a/1389900/171572">source</a>).</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash"># Generate stabilization data and save it to `transforms.trf`
-ffmpeg -i input.mp4 -vf vidstabdetect -f null -
-
-# Stabilize the video
-ffmpeg -i input.mp4 -vf vidstabtransform stabilized.mp4
-
-# Create stacked comparison video
-ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex vstack stacked.MP4
-
-# Create side-by-side comparison video
-ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex hstack side-by-side.MP4</code></pre>
-</div>
-</div>
+<p>Для кофеен выбирайте молоко с содержанием лактозы более 4%, от 4 грамм на 100 мл молока.
+Иначе оно будет несладким и безвкусным.</p>
 </li>
 <li>
-<p><code>ffmpeg deshake</code> (<a href="https://askubuntu.com/a/834594/171572">source</a>).</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">ffmpeg -i input.mp4 -vf deshake=rx=64:ry=64:blocksize=32 -strict -2 stabilized.mp4</code></pre>
-</div>
-</div>
+<p>Обычно молоко содержит около 3–3,3% белка.
+Но в большинство коммерческих молочных продуктов добавляют больше белка. Это помогает добиться более прочной и стабильной молочной пены.</p>
 </li>
 <li>
-<p>Blender</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://youtu.be/oCHjdEODrpM">How to Stabilize footage in Blender! (Blender VFX)</a> (quick, almost no explanations)</p>
+<p>Для кофеен выбирайте молоко с содержанием белка от 3% и выше.</p>
 </li>
 <li>
-<p><a href="https://youtu.be/X8s1kZ-HFww">Blender 2.8 2D video stabilization tutorial</a> (explains all the details)</p>
+<p>Для кофеен выбирайте молоко с содержанием жира 3,2–4%.
+Это идеальный баланс для округлого тела напитка и эластичности пены.</p>
 </li>
 <li>
-<p><a href="https://youtu.be/8juK-ebEVWUp">Blender 2.81 Movie Clip Editor: Stabilize And Edit A Shaky Video Clip And Render/Export With Audio</a> (explains how to get audio in stabilized videos)</p>
+<p>Для кофеен выбирайте ультрапастеризованное молоко.
+Оно дольше хранится, имеет удобную упаковку и сохраняет все полезные свойства.</p>
+</li>
+<li>
+<p>Если эти показатели будут ниже, то молочная пена будет нестабильной и водянистой.
+Если показатель жирности будет выше, вкус молока перебьет вкус кофе.</p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
-</div>
-</div>
 </div>
 </article>
  
@@ -2104,7 +2092,7 @@ ffmpeg -i input.mp4 -i stabilized.mp4 -filter_complex hstack side-by-side.MP4</c
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/madhead/wiki/edit/master/content/wiki/photo%20&amp;%20video/video/_index.adoc" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/madhead/wiki/edit/master/content/wiki/cooking/coffee/milk.adoc" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>Edit this page</span>
     </a>
