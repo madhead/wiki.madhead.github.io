@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>🤓 C on Everything I know</title>
+    <link>https://wiki.madhead.me/wiki/software-engineering/programming-languages/c/</link>
+    <description>Recent content in 🤓 C on Everything I know</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://wiki.madhead.me/wiki/software-engineering/programming-languages/c/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
