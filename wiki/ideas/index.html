@@ -27,11 +27,12 @@ The Ultimate Guide for Becoming an Idea Machine
 
 The main idea (no pun intended) here is to generate 10 ideas every day to train the brain to create new ideas.
 ">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://wiki.madhead.me/wiki/ideas/">
   <meta property="og:site_name" content="Everything I know">
   <meta property="og:title" content="💡 Ideas">
-  <meta property="og:description" content=" I write down all the ideas I have — no matter what domain they belong — into a separate GitHub repository: /ideas. Every idea is just an issue marked with the 💡 idea label. All the ideas are rendered in the README. Ideas &#34;in progress&#34; are marked with the construction sign (🚧) emoji.
+  <meta property="og:description" content="I write down all the ideas I have — no matter what domain they belong — into a separate GitHub repository: /ideas. Every idea is just an issue marked with the 💡 idea label. All the ideas are rendered in the README. Ideas &#34;in progress&#34; are marked with the construction sign (🚧) emoji.
 Implemented ideas
 Discarded ideas
 The Ultimate Guide for Becoming an Idea Machine [🇬🇧]
@@ -39,11 +40,12 @@ The main idea (no pun intended) here is to generate 10 ideas every day to train 
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 <title>💡 Ideas | Everything I know</title>
+<link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.ad3fd74d744966d37542ba09d71f6dd260c3ed2a66113a0dfdb48443f31d471b.css" integrity="sha256-rT/XTXRJZtN1QroJ1x9t0mDD7SpmEToN/bSEQ/MdRxs=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.adf946121d43c0c273ff5bb0a6218bb23b8516de8715ec25f52e2e34fec66b4b.js" integrity="sha256-rflGEh1DwMJz/1uwpiGLsjuFFt6HFewl9S4uNP7Ga0s=" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://wiki.madhead.me/wiki/ideas/">
+<link rel="stylesheet" href="/book.min.8c69c54a38cfed240058d6bb76cd6945d7c86933545bb262269d2f9b4fb45ccd.css" integrity="sha256-jGnFSjjP7SQAWNa7ds1pRdfIaTNUW7JiJp0vm0&#43;0XM0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.d541544369c5ef46d49c89cd990976e72abb422596bd4ba0a051fa9dd5c14144.js" integrity="sha256-1UFUQ2nF70bUnInNmQl25yq7QiWWvUugoFH6ndXBQUQ=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 
@@ -76,16 +78,17 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="/"><img src="/logo.svg" alt="Logo" /><span>Everything I know</span>
+  <a class="flex align-center" href="/"><img src="/logo.svg" alt="Logo" class="book-icon" /><span>Everything I know</span>
   </a>
 </h2>
 
 
-<div class="book-search">
+<div class="book-search hidden">
   <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
 
 
@@ -98,7 +101,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  
 
 
 
@@ -2328,7 +2330,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
 </nav>
 
 
@@ -2349,7 +2350,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>💡 Ideas</strong>
+  <h3>💡 Ideas</h3>
 
   <label for="toc-control">
     
@@ -2374,7 +2375,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><div class="ulist">
+  <article class="markdown book-article"><div class="ulist">
 <ul>
 <li>
 <p>I write down all the ideas I have — no matter what domain they belong — into a separate GitHub repository: <a href="https://github.com/madhead/ideas"><img src="/logo.svg" alt="me" class="me">/ideas</a>.
@@ -2414,7 +2415,7 @@ Ideas &#34;in progress&#34; are marked with the construction sign (🚧) emoji.<
 
   <div>
     <a class="flex align-center" href="https://github.com/madhead/wiki/edit/master/content/wiki/ideas/_index.adoc" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
       <span>Edit this page</span>
     </a>
   </div>

@@ -25,20 +25,22 @@ A series of four articles mostly focusing on low-level (lmctfy, runc, rkt) and h
 
 
 ">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://wiki.madhead.me/wiki/software-engineering/containers-docker-k8s/containers/">
   <meta property="og:site_name" content="Everything I know">
   <meta property="og:title" content="📦 Containers">
-  <meta property="og:description" content=" Links Container Runtimes 1 • 2 • 3 • 4
+  <meta property="og:description" content="Links Container Runtimes 1 • 2 • 3 • 4
 A series of four articles mostly focusing on low-level (lmctfy, runc, rkt) and high-level (Docker, containerd, rkt) runtimes and differences between them.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 <title>📦 Containers | Everything I know</title>
+<link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.ad3fd74d744966d37542ba09d71f6dd260c3ed2a66113a0dfdb48443f31d471b.css" integrity="sha256-rT/XTXRJZtN1QroJ1x9t0mDD7SpmEToN/bSEQ/MdRxs=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.adf946121d43c0c273ff5bb0a6218bb23b8516de8715ec25f52e2e34fec66b4b.js" integrity="sha256-rflGEh1DwMJz/1uwpiGLsjuFFt6HFewl9S4uNP7Ga0s=" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://wiki.madhead.me/wiki/software-engineering/containers-docker-k8s/containers/">
+<link rel="stylesheet" href="/book.min.8c69c54a38cfed240058d6bb76cd6945d7c86933545bb262269d2f9b4fb45ccd.css" integrity="sha256-jGnFSjjP7SQAWNa7ds1pRdfIaTNUW7JiJp0vm0&#43;0XM0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.d541544369c5ef46d49c89cd990976e72abb422596bd4ba0a051fa9dd5c14144.js" integrity="sha256-1UFUQ2nF70bUnInNmQl25yq7QiWWvUugoFH6ndXBQUQ=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 
@@ -71,16 +73,17 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="/"><img src="/logo.svg" alt="Logo" /><span>Everything I know</span>
+  <a class="flex align-center" href="/"><img src="/logo.svg" alt="Logo" class="book-icon" /><span>Everything I know</span>
   </a>
 </h2>
 
 
-<div class="book-search">
+<div class="book-search hidden">
   <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
 
 
@@ -93,7 +96,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  
 
 
 
@@ -2323,7 +2325,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
 </nav>
 
 
@@ -2344,7 +2345,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>📦 Containers</strong>
+  <h3>📦 Containers</h3>
 
   <label for="toc-control">
     
@@ -2373,7 +2374,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown">
+  <article class="markdown book-article">
 <div class="sect1">
 <h2 id="_links">Links</h2>
 <div class="sectionbody">
@@ -2409,7 +2410,7 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     <a class="flex align-center" href="https://github.com/madhead/wiki/edit/master/content/wiki/software%20engineering/Containers,%20Docker,%20K8S/containers/_index.adoc" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
       <span>Edit this page</span>
     </a>
   </div>
