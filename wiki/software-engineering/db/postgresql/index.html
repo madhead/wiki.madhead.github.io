@@ -27,6 +27,27 @@ PostgreSQL 16 изнутри
 
 
 
+
+
+Indices
+
+
+BRIN
+
+
+
+PostgreSQL BRIN Indexes: Big Data Performance With Minimal Storage
+
+
+Avoiding the Pitfalls of BRIN Indexes in Postgres
+
+
+Postgres Indexing: When Does BRIN Win?
+
+
+
+
+
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
@@ -37,7 +58,10 @@ PostgreSQL 16 изнутри
 Serverless PostgreSQL with copy-on-write branching, capabilities.
 PGlite
 PostgreSQL in WASM.
-PostgreSQL 16 изнутри [🇷🇺]">
+PostgreSQL 16 изнутри [🇷🇺]
+Indices BRIN PostgreSQL BRIN Indexes: Big Data Performance With Minimal Storage
+Avoiding the Pitfalls of BRIN Indexes in Postgres
+Postgres Indexing: When Does BRIN Win?">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 <title>🐘 PostgreSQL | Everything I know</title>
@@ -46,7 +70,7 @@ PostgreSQL 16 изнутри [🇷🇺]">
 <link rel="canonical" href="https://wiki.madhead.me/wiki/software-engineering/db/postgresql/">
 <link rel="stylesheet" href="/book.min.8c69c54a38cfed240058d6bb76cd6945d7c86933545bb262269d2f9b4fb45ccd.css" integrity="sha256-jGnFSjjP7SQAWNa7ds1pRdfIaTNUW7JiJp0vm0&#43;0XM0=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a39d9d1f3897b8a65e8428bad88cb550e0fbcb150f2fd135f642078b7ac7076.js" integrity="sha256-ajnZ0fOJe4pl6EKLrYjLVQ4PvLFQ8v0TX2QgeLescHY=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.34d5ae1c1d3c86d6fa331ce2c88ee9cae6271641884b3331a8710ef2b2ec64a0.js" integrity="sha256-NNWuHB08htb6MxziyI7pyuYnFkGISzMxqHEO8rLsZKA=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 
@@ -2431,6 +2455,11 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents">
   <ul>
     <li><a href="#_misc">Misc</a></li>
+    <li><a href="#_indices">Indices</a>
+      <ul>
+        <li><a href="#_brin">BRIN</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -2466,6 +2495,27 @@ https://github.com/alex-shpak/hugo-book
 [🇷🇺]</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_indices">Indices</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_brin">BRIN</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://crunchydata.com/blog/postgresql-brin-indexes-big-data-performance-with-minimal-storage">PostgreSQL BRIN Indexes: Big Data Performance With Minimal Storage</a></p>
+</li>
+<li>
+<p><a href="https://crunchydata.com/blog/avoiding-the-pitfalls-of-brin-indexes-in-postgres">Avoiding the Pitfalls of BRIN Indexes in Postgres</a></p>
+</li>
+<li>
+<p><a href="https://crunchydata.com/blog/postgres-indexing-when-does-brin-win">Postgres Indexing: When Does BRIN Win?</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -2514,6 +2564,11 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents">
   <ul>
     <li><a href="#_misc">Misc</a></li>
+    <li><a href="#_indices">Indices</a>
+      <ul>
+        <li><a href="#_brin">BRIN</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
