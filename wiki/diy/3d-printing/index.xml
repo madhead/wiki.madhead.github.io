@@ -28,5 +28,12 @@
       <guid>https://wiki.madhead.me/wiki/diy/3d-printing/best-practices/</guid>
       <description>&lt;div class=&#34;sect1&#34;&gt;&#xA;&lt;h2 id=&#34;_best_practices&#34;&gt;Best practices&lt;/h2&gt;&#xA;&lt;div class=&#34;sectionbody&#34;&gt;&#xA;&lt;div class=&#34;ulist&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://blog.rahix.de/design-for-3d-printing&#34;&gt;Design for 3D-Printing&lt;/a&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;ulist&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/Rahix/FusedFilamentDesign&#34;&gt;Rahix/FusedFilamentDesign&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://edstechnologies.com/blog/plastic-part-design-consideration&#34;&gt;Design Considerations during Design of Plastic Parts&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://dfmpro.com/blog/10-simple-design-guidelines-one-follow-effective-design-boss-features-plastic-parts&#34;&gt;10 Simple Design Guidelines One Should Follow in Effective Design of Boss Features in Plastic Parts&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
+    <item>
+      <title>🗜️ Projects</title>
+      <link>https://wiki.madhead.me/wiki/diy/3d-printing/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wiki.madhead.me/wiki/diy/3d-printing/projects/</guid>
+      <description>&lt;div class=&#34;sect1&#34;&gt;&#xA;&lt;h2 id=&#34;_projects&#34;&gt;Projects&lt;/h2&gt;&#xA;&lt;div class=&#34;sectionbody&#34;&gt;&#xA;&lt;div class=&#34;ulist&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://openflexure.org&#34;&gt;OpenFlexure&lt;/a&gt;: high precision mechanical positioning available to anyone with a 3D printer - for use in microscopes, micromanipulators, and more.&lt;/p&gt;&#xA;&lt;div class=&#34;ulist&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://openflexure.org/projects/microscope&#34;&gt;OpenFlexure Microscope&lt;/a&gt;, a customisable, open-source optical microscope, using either very cheap webcam optics or lab quality, RMS threaded microscope objectives.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
   </channel>
 </rss>
