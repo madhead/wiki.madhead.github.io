@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>📓 E-readers on Everything I know</title>
+    <link>https://wiki.madhead.me/wiki/books/e-books/</link>
+    <description>Recent content in 📓 E-readers on Everything I know</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://wiki.madhead.me/wiki/books/e-books/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📓 Kindle</title>
+      <link>https://wiki.madhead.me/wiki/books/e-books/kindle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wiki.madhead.me/wiki/books/e-books/kindle/</guid>
+      <description>&lt;div class=&#34;sect1&#34;&gt;&#xA;&lt;h2 id=&#34;_jailbreaking&#34;&gt;Jailbreaking&lt;/h2&gt;&#xA;&lt;div class=&#34;sectionbody&#34;&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;I was able to jailbreak my Kindle Paperwhite 5 (2021) with AdBreak according to the instructions from this site: &lt;a href=&#34;https://kindlemodding.org&#34; class=&#34;bare&#34;&gt;https://kindlemodding.org&lt;/a&gt;.&#xA;It is the &amp;#34;jailbreaking wiki&amp;#34;.&#xA;The only tricky part was enabling the ads (AKA &amp;#34;special offers&amp;#34;) on the device.&#xA;Apparently, Kindles sold in Poland do not have ads, so I had to move my account to another country (Germany) to enable them.&#xA;After that, the jailbreak process was straightforward.&#xA;After jailbreaking I moved my account back to Poland with no issues.&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
