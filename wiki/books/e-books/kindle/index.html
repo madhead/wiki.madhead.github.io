@@ -29,7 +29,7 @@ After jailbreaking I moved my account back to Poland with no issues.
 <link rel="canonical" href="https://wiki.madhead.me/wiki/books/e-books/kindle/">
 <link rel="stylesheet" href="/book.min.5c90e3704f1662aa90856dcfe495b675034bc7e2ab92cd78998d380ef030b97a.css" integrity="sha256-XJDjcE8WYqqQhW3P5JW2dQNLx&#43;Krks14mY04DvAwuXo=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.9cdf2c5fa46f8441ca6b57b3c904a5ef83c456b630aa8afc9ffe2dd36baa9798.js" integrity="sha256-nN8sX6RvhEHKa1ezyQSl74PEVrYwqor8n/4t02uql5g=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.8bf418b3daadf5bca8c11b451183a0e90a7a4a3901b614a93442ba94af6cdbda.js" integrity="sha256-i/QYs9qt9byowRtFEYOg6Qp6SjkBthSpNEK6lK9s29o=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 
@@ -2829,6 +2829,29 @@ After jailbreaking I moved my account back to Poland with no issues.</p>
 <li>
 <p><a href="https://koreader.rocks">KOReader</a>.
 Installing KOReader is the main goal of jailbreaking.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_misc">Misc</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.mobileread.com/forums/showpost.php?p=3728291&amp;postcount=17">Converting screensavers to Kindle format</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">convert input.png -colorspace Lab -filter LanczosSharp -distort Resize 1080x1429 -colorspace sRGB -background black -gravity center -extent 1080x1429! -grayscale Rec709Luminance -colorspace sRGB -dither Riemersma -remap eink_cmap.gif -quality 75 png:out.png</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">convert input.png -filter LanczosSharp -resize 1080x1429 -background black -gravity center -extent &#39;1080x1429!&#39; -colorspace Gray -dither Riemersma -remap eink_cmap.gif -quality 75 png:out.png</code></pre>
+</div>
+</div>
 </li>
 </ul>
 </div>
