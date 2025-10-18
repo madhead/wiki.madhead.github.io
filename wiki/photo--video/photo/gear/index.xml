@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>🗜️ Gear on Everything I know</title>
-    <link>https://wiki.madhead.me/wiki/art/photography/gear/</link>
+    <link>https://wiki.madhead.me/wiki/photo--video/photo/gear/</link>
     <description>Recent content in 🗜️ Gear on Everything I know</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://wiki.madhead.me/wiki/art/photography/gear/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wiki.madhead.me/wiki/photo--video/photo/gear/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
