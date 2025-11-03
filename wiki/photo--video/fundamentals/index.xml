@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>🏗️ Fundamentals on Everything I know</title>
+    <link>https://wiki.madhead.me/wiki/photo--video/fundamentals/</link>
+    <description>Recent content in 🏗️ Fundamentals on Everything I know</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://wiki.madhead.me/wiki/photo--video/fundamentals/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🎨 Chroma subsampling</title>
+      <link>https://wiki.madhead.me/wiki/photo--video/fundamentals/chroma-subsampling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wiki.madhead.me/wiki/photo--video/fundamentals/chroma-subsampling/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://youtu.be/r8R0Md1dtZA&#34;&gt;Here&lt;/a&gt; is a good video explaining chroma subsampling (and 10-bit color depth).&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
